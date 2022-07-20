@@ -3,6 +3,7 @@ package com.example.myapplication;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Context;
 import android.content.Intent;
 import android.content.pm.ActivityInfo;
 import android.content.res.Configuration;
@@ -16,18 +17,19 @@ import android.widget.Toast;
 public class MainActivity extends AppCompatActivity {
     Button btnChange;
     Button add;
-
     Button actC;
     Button actA;
     TextView text;
     int counter;
     String str;
+    private Context context;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        context=this;
         Intent intent=getIntent();
-        Toast.makeText(MainActivity.this,"ON CREATE", Toast.LENGTH_SHORT).show();
+        Toast.makeText(context,"ON CREATE", Toast.LENGTH_SHORT).show();
          btnChange=(Button)  findViewById(R.id.setPort);
          actC=(Button) findViewById(R.id.button5);
          actA=(Button) findViewById(R.id.button4);
@@ -48,7 +50,7 @@ public class MainActivity extends AppCompatActivity {
         actC.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View view) {
-                Intent intent =new Intent(MainActivity.this,MainActivity3.class);
+                Intent intent =new Intent(context,MainActivity3.class);
                 startActivity(intent);
             }
         });
