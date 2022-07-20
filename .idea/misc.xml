@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="DesignSurface">
+    <option name="filePathToZoomLevelMap">
+      <map>
+        <entry key="..\:/Users/Tringapps-Admin/AndroidStudioProjects/MyApplication/app/src/main/res/layout/activity_bound.xml" value="0.14407866609662248" />
+        <entry key="..\:/Users/Tringapps-Admin/AndroidStudioProjects/MyApplication/app/src/main/res/layout/activity_broacast.xml" value="0.1" />
+        <entry key="..\:/Users/Tringapps-Admin/AndroidStudioProjects/MyApplication/app/src/main/res/layout/activity_calcin.xml" value="0.14407866609662248" />
+        <entry key="..\:/Users/Tringapps-Admin/AndroidStudioProjects/MyApplication/app/src/main/res/layout/activity_calcout.xml" value="0.14407866609662248" />
+        <entry key="..\:/Users/Tringapps-Admin/AndroidStudioProjects/MyApplication/app/src/main/res/layout/activity_exp_service.xml" value="0.13253527148353997" />
+        <entry key="..\:/Users/Tringapps-Admin/AndroidStudioProjects/MyApplication/app/src/main/res/layout/activity_frag_home.xml" value="0.14407866609662248" />
+        <entry key="..\:/Users/Tringapps-Admin/AndroidStudioProjects/MyApplication/app/src/main/res/layout/activity_frag_main.xml" value="0.14407866609662248" />
+        <entry key="..\:/Users/Tringapps-Admin/AndroidStudioProjects/MyApplication/app/src/main/res/layout/activity_frag_pass.xml" value="0.14407866609662248" />
+        <entry key="..\:/Users/Tringapps-Admin/AndroidStudioProjects/MyApplication/app/src/main/res/layout/activity_home.xml" value="0.14407866609662248" />
+        <entry key="..\:/Users/Tringapps-Admin/AndroidStudioProjects/MyApplication/app/src/main/res/layout/activity_login.xml" value="0.14407866609662248" />
+        <entry key="..\:/Users/Tringapps-Admin/AndroidStudioProjects/MyApplication/app/src/main/res/layout/activity_main.xml" value="0.22" />
+        <entry key="..\:/Users/Tringapps-Admin/AndroidStudioProjects/MyApplication/app/src/main/res/layout/activity_main2.xml" value="0.14407866609662248" />
+        <entry key="..\:/Users/Tringapps-Admin/AndroidStudioProjects/MyApplication/app/src/main/res/layout/activity_main3.xml" value="0.14407866609662248" />
+        <entry key="..\:/Users/Tringapps-Admin/AndroidStudioProjects/MyApplication/app/src/main/res/layout/activity_service_home.xml" value="0.1" />
+        <entry key="..\:/Users/Tringapps-Admin/AndroidStudioProjects/MyApplication/app/src/main/res/layout/fraga.xml" value="0.14407866609662248" />
+        <entry key="..\:/Users/Tringapps-Admin/AndroidStudioProjects/MyApplication/app/src/main/res/layout/fragb.xml" value="0.14407866609662248" />
+        <entry key="..\:/Users/Tringapps-Admin/AndroidStudioProjects/MyApplication/app/src/main/res/layout/samplefrag.xml" value="0.130859375" />
+        <entry key="..\:/Users/Tringapps-Admin/AndroidStudioProjects/MyApplication/app/src/main/res/layout/samplefrag2.xml" value="0.14407866609662248" />
+        <entry key="..\:/Users/Tringapps-Admin/AndroidStudioProjects/MyApplication/app/src/main/res/layout/samplefrag3.xml" value="0.14407866609662248" />
+      </map>
+    </option>
+  </component>
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="Android Studio default JDK" project-jdk-type="JavaSDK">
+    <output url="file://$PROJECT_DIR$/build/classes" />
+  </component>
+  <component name="ProjectType">
+    <option name="id" value="Android" />
+  </component>
+</project>
