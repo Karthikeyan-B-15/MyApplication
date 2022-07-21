@@ -7,6 +7,7 @@ import android.content.Intent;
 import android.os.Binder;
 import android.os.Build;
 import android.os.IBinder;
+import android.provider.SyncStateContract;
 import android.util.Log;
 
 import androidx.annotation.Nullable;
@@ -15,6 +16,7 @@ import androidx.annotation.RequiresApi;
 public class BoundService extends Service {
     private int count=0;
     private boolean boolval=false;
+    private String STOP_ACTION="stop";
     class MyBinder extends Binder{
         public BoundService getService(){
             return BoundService.this;
@@ -33,38 +35,49 @@ public class BoundService extends Service {
     public int onStartCommand(Intent intent, int flags, int startId) {
         Log.i("demo","Thread Id :"+Thread.currentThread().getId());
         boolval=true;
+        if(STOP_ACTION.equals(intent.getAction())){
+            stopSelf();
+        }
         new Thread((Runnable) ()->{
             startCount();
         }).start();
-        // If the notification supports a direct reply action, use
-// PendingIntent.FLAG_MUTABLE instead.
-        Intent notificationIntent = new Intent(this, Bound.class);
-        PendingIntent pendingIntent =
-                PendingIntent.getActivity(this, 0, notificationIntent,
-                        PendingIntent.FLAG_IMMUTABLE);
-
-
-        Notification notification = new Notification.Builder(this, com.example.myapplication.App.ID)
-                    .setContentTitle("Example Notification")
-                .setSmallIcon(R.drawable.ic_android)
-                    .setContentIntent(pendingIntent)
-                    .build();
-
-
-// Notification ID cannot be 0.
-        startForeground(1, notification);
 
         return START_STICKY;
     }
+    @RequiresApi(api = Build.VERSION_CODES.O)
     public void startCount(){
     while(boolval){
         try{
             Thread.sleep(1000);
             if(boolval){
                 count=count+1;
+                Intent notificationIntent = new Intent(this, Bound.class);
+                PendingIntent pendingIntent =PendingIntent.getActivity(this, 0, notificationIntent, PendingIntent.FLAG_IMMUTABLE);
+                //Broadcast sending data from notification
+                Intent broadIntent= new Intent("com.example.foreground");
+                broadIntent.putExtra("fore",count);
+                PendingIntent actionIntent=PendingIntent.getBroadcast(this,0,broadIntent,PendingIntent.FLAG_UPDATE_CURRENT);
+                //Stop the service from notification bar
+                Intent stop=new Intent(this,BoundService.class);
+                stop.setAction(STOP_ACTION);
+                PendingIntent pStopSelf = PendingIntent.getForegroundService(this, 0, stop,PendingIntent.FLAG_CANCEL_CURRENT);
+
+                Notification notification = new Notification.Builder(this, App.ID)
+                        .setContentTitle("Example Notification")
+                        .setSmallIcon(R.drawable.ic_android)
+                        .setContentIntent(pendingIntent)
+                        .setContentText(String.valueOf(count))
+                        .setAutoCancel(true)
+                        .setOnlyAlertOnce(true)
+                        .addAction(R.mipmap.ic_launcher, "send", actionIntent)
+                        .addAction(R.mipmap.ic_launcher,"cancel",pStopSelf)
+                        .build();
+                startForeground(1, notification);
+
                 Intent intent=new Intent("com.myapp.broad_cast_receiver");
                 intent.putExtra("intval",count);
                 sendBroadcast(intent);
+
                 Log.i("demo","Thread Id :"+Thread.currentThread().getId()+" "+"Count :"+count);
             }
         }catch (InterruptedException e){
