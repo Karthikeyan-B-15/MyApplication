@@ -24,14 +24,105 @@
         android:id="@+id/textView4"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Relative Fragment"
-        android:textSize="20sp"
         android:layout_below="@id/image2"
-        android:ems="10"/>
+        android:background="@drawable/style"
+        android:ems="10"
+        android:shadowColor="@color/black"
+        android:shadowRadius="5"
+        android:shadowDy="5"
+        android:marqueeRepeatLimit="marquee_forever"
+        android:padding="10dp"
+        android:text="Relative Fragment used for positioning the its child elements"
+        android:textSize="20sp"
+        android:ellipsize="marquee"
+        android:scrollHorizontally="true"
+        android:singleLine="true"
+        />
 
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignParentRight="true"
+        android:layout_alignBaseline="@id/textView6"
+        android:minHeight="32dp"
         android:text="button" />
+
+    <TextView
+        android:id="@+id/textView6"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Relative Layout"
+        android:textSize="20sp" />
+
+    <com.example.myapplication.CustomLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/textView4">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="fill_vertical|center_horizontal"
+            android:background="#5c5"
+            android:text="l1sdfvdfvdsv"
+            app:layout_position="right" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="fill_vertical|center_horizontal"
+            android:background="@drawable/filled_box"
+            android:text="l2"
+            app:layout_position="left" />
+
+        <!-- also put a view on the right. -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="fill_vertical|center_horizontal"
+            android:background="@drawable/filled_box"
+            android:text="r1"
+            app:layout_position="right" />
+
+        <!-- by default views go in the middle; use fill vertical gravity -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="fill_vertical|center_horizontal"
+            android:background="#5c5"
+            android:text="fill-vert" />
+
+        <!-- by default views go in the middle; use fill horizontal gravity -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical|fill_horizontal"
+            android:background="@drawable/green"
+            android:text="fill-horiz" />
+
+        <!-- by default views go in the middle; use top-left gravity -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="top|left"
+            android:background="@drawable/blue"
+            android:text="top-left" />
+
+        <!-- by default views go in the middle; use center gravity -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:background="@drawable/blue"
+            android:text="center" />
+
+        <!-- by default views go in the middle; use bottom-right -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom|right"
+            android:background="@drawable/blue"
+            android:text="bottom-right" />
+
+
+    </com.example.myapplication.CustomLayout>
 </RelativeLayout>

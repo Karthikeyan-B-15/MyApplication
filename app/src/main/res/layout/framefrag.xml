@@ -11,10 +11,10 @@
     <ImageView
         android:id="@+id/image3"
         android:layout_width="wrap_content"
-        android:layout_height="490dp"
-        android:layout_gravity="top"
+        android:layout_height="260dp"
+        android:layout_gravity="center"
         android:src="@drawable/nature2"
-        android:visibility="gone"
+        android:adjustViewBounds="true"
         />
 
     <TextView
@@ -27,13 +27,15 @@
         android:visibility="invisible"/>
 
     <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="button"
-        android:layout_gravity="center_vertical"/>\
-    <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Button"
-        android:foregroundGravity="bottom"/>
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:layout_gravity="center"
+        android:text="button1"
+        />
+
+<!--    <Button-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:text="Button2"-->
+<!--        android:foregroundGravity="bottom"/>-->
 </FrameLayout>

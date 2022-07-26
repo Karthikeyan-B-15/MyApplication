@@ -22,7 +22,7 @@ public class LinearFrag extends Fragment {
         View v=inflater.inflate(R.layout.linearfrag,container,false);
         imageView=v.findViewById(R.id.image1);
         linearLayout=v.findViewById(R.id.childlinear);
-        linearLayout.setOrientation(LinearLayout.VERTICAL);
+//        linearLayout.setOrientation(LinearLayout.VERTICAL);
         drawable=getResources().getDrawable(R.drawable.nature1);
         imageView.setImageDrawable(drawable);
         return v;
