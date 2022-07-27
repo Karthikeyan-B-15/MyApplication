@@ -21,8 +21,10 @@
         <entry key="..\:/Users/Tringapps-Admin/AndroidStudioProjects/MyApplication/app/src/main/res/layout/activity_main.xml" value="0.22" />
         <entry key="..\:/Users/Tringapps-Admin/AndroidStudioProjects/MyApplication/app/src/main/res/layout/activity_main2.xml" value="0.14407866609662248" />
         <entry key="..\:/Users/Tringapps-Admin/AndroidStudioProjects/MyApplication/app/src/main/res/layout/activity_main3.xml" value="0.14407866609662248" />
+        <entry key="..\:/Users/Tringapps-Admin/AndroidStudioProjects/MyApplication/app/src/main/res/layout/activity_scrolling.xml" value="0.14407866609662248" />
         <entry key="..\:/Users/Tringapps-Admin/AndroidStudioProjects/MyApplication/app/src/main/res/layout/activity_service_home.xml" value="0.1" />
         <entry key="..\:/Users/Tringapps-Admin/AndroidStudioProjects/MyApplication/app/src/main/res/layout/constraintfrag.xml" value="0.14407866609662248" />
+        <entry key="..\:/Users/Tringapps-Admin/AndroidStudioProjects/MyApplication/app/src/main/res/layout/content_scrolling.xml" value="0.14407866609662248" />
         <entry key="..\:/Users/Tringapps-Admin/AndroidStudioProjects/MyApplication/app/src/main/res/layout/example.xml" value="0.14322359982898675" />
         <entry key="..\:/Users/Tringapps-Admin/AndroidStudioProjects/MyApplication/app/src/main/res/layout/fraga.xml" value="0.14407866609662248" />
         <entry key="..\:/Users/Tringapps-Admin/AndroidStudioProjects/MyApplication/app/src/main/res/layout/fragb.xml" value="0.14407866609662248" />
@@ -32,6 +34,8 @@
         <entry key="..\:/Users/Tringapps-Admin/AndroidStudioProjects/MyApplication/app/src/main/res/layout/samplefrag.xml" value="0.130859375" />
         <entry key="..\:/Users/Tringapps-Admin/AndroidStudioProjects/MyApplication/app/src/main/res/layout/samplefrag2.xml" value="0.14407866609662248" />
         <entry key="..\:/Users/Tringapps-Admin/AndroidStudioProjects/MyApplication/app/src/main/res/layout/samplefrag3.xml" value="0.14407866609662248" />
+        <entry key="..\:/Users/Tringapps-Admin/AndroidStudioProjects/MyApplication/app/src/main/res/menu/menu_scrolling.xml" value="0.14407866609662248" />
+        <entry key="..\:/Users/Tringapps-Admin/AndroidStudioProjects/MyApplication/app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml" value="0.1" />
       </map>
     </option>
   </component>
