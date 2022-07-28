@@ -14,10 +14,18 @@ public class Layout extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_layout);
         Button lbtn1=(Button)findViewById(R.id.lbtn1);
+        Button lbtn2=(Button)findViewById(R.id.lbtn6);
         lbtn1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 Intent intent=new Intent(Layout.this,LayoutHome.class);
+                startActivity(intent);
+            }
+        });
+        lbtn2.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent=new Intent(Layout.this,LayoutExample.class);
                 startActivity(intent);
             }
         });
