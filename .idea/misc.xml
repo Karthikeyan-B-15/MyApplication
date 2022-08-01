@@ -3,8 +3,10 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Users/Tringapps-Admin/AndroidStudioProjects/MyApplication/app/src/main/res/drawable-v24/ic_launcher_foreground.xml" value="0.1575" />
         <entry key="..\:/Users/Tringapps-Admin/AndroidStudioProjects/MyApplication/app/src/main/res/drawable/gradient.xml" value="0.1575" />
         <entry key="..\:/Users/Tringapps-Admin/AndroidStudioProjects/MyApplication/app/src/main/res/drawable/ic_android.xml" value="0.184" />
+        <entry key="..\:/Users/Tringapps-Admin/AndroidStudioProjects/MyApplication/app/src/main/res/drawable/ic_launcher_background.xml" value="0.1575" />
         <entry key="..\:/Users/Tringapps-Admin/AndroidStudioProjects/MyApplication/app/src/main/res/drawable/style.xml" value="0.184" />
         <entry key="..\:/Users/Tringapps-Admin/AndroidStudioProjects/MyApplication/app/src/main/res/font/fontstyle.xml" value="0.16802052159042324" />
         <entry key="..\:/Users/Tringapps-Admin/AndroidStudioProjects/MyApplication/app/src/main/res/layout/activity_bound.xml" value="0.14407866609662248" />
@@ -28,8 +30,9 @@
         <entry key="..\:/Users/Tringapps-Admin/AndroidStudioProjects/MyApplication/app/src/main/res/layout/activity_service_home.xml" value="0.1" />
         <entry key="..\:/Users/Tringapps-Admin/AndroidStudioProjects/MyApplication/app/src/main/res/layout/activity_splash_screen.xml" value="0.12" />
         <entry key="..\:/Users/Tringapps-Admin/AndroidStudioProjects/MyApplication/app/src/main/res/layout/button.xml" value="0.14407866609662248" />
-        <entry key="..\:/Users/Tringapps-Admin/AndroidStudioProjects/MyApplication/app/src/main/res/layout/constraintfrag.xml" value="0.14407866609662248" />
+        <entry key="..\:/Users/Tringapps-Admin/AndroidStudioProjects/MyApplication/app/src/main/res/layout/constraintfrag.xml" value="0.12666666666666668" />
         <entry key="..\:/Users/Tringapps-Admin/AndroidStudioProjects/MyApplication/app/src/main/res/layout/content_scrolling.xml" value="0.14407866609662248" />
+        <entry key="..\:/Users/Tringapps-Admin/AndroidStudioProjects/MyApplication/app/src/main/res/layout/customdialog.xml" value="0.14322359982898675" />
         <entry key="..\:/Users/Tringapps-Admin/AndroidStudioProjects/MyApplication/app/src/main/res/layout/example.xml" value="0.14322359982898675" />
         <entry key="..\:/Users/Tringapps-Admin/AndroidStudioProjects/MyApplication/app/src/main/res/layout/fraga.xml" value="0.14407866609662248" />
         <entry key="..\:/Users/Tringapps-Admin/AndroidStudioProjects/MyApplication/app/src/main/res/layout/fragb.xml" value="0.14407866609662248" />

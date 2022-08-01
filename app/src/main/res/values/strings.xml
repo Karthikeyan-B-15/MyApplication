@@ -2,6 +2,11 @@
     <string name="app_name">My Application</string>
     <string name="button">Button</string>
     <string name="title_activity_scrolling">ScrollingActivity</string>
+    <string-array name="customer">
+        <item>Karthi</item>
+        <item>Mani</item>
+        <item>Hemath</item>
+    </string-array>
     <string name="large_text">
         "Material is the metaphor.\n\n"
 
