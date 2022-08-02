@@ -19,6 +19,9 @@
         android:theme="@style/Theme.MyApplication"
         tools:targetApi="31">
         <activity
+            android:name=".ThreadsDemo"
+            android:exported="false" />
+        <activity
             android:name=".SplashScreen"
             android:exported="true"
             android:theme="@style/Theme.AppCompat.Light.NoActionBar">
@@ -32,8 +35,7 @@
             android:name=".LayoutExample"
             android:configChanges="screenSize|orientation|smallestScreenSize|screenLayout"
             android:exported="false"
-            android:supportsPictureInPicture="true"
-            />
+            android:supportsPictureInPicture="true" />
         <activity
             android:name=".ScrollingActivity"
             android:exported="false"
@@ -71,9 +73,7 @@
             android:exported="false" />
         <activity
             android:name=".Home"
-            android:exported="true">
-
-        </activity>
+            android:exported="true"></activity>
         <activity
             android:name=".calcout"
             android:exported="false" />
@@ -111,6 +111,7 @@
             <!-- <action android:name="android.provider.Telephony.SMS_RECEIVED" /> -->
             <!-- </intent-filter> -->
         </receiver>
+
         <meta-data
             android:name="preloaded_fonts"
             android:resource="@array/preloaded_fonts" />
