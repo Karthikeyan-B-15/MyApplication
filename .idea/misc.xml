@@ -4,10 +4,18 @@
     <option name="filePathToZoomLevelMap">
       <map>
         <entry key="..\:/Users/Tringapps-Admin/AndroidStudioProjects/MyApplication/app/src/main/res/drawable-v24/ic_launcher_foreground.xml" value="0.1575" />
+        <entry key="..\:/Users/Tringapps-Admin/AndroidStudioProjects/MyApplication/app/src/main/res/drawable/btn_selector.xml" value="0.1575" />
+        <entry key="..\:/Users/Tringapps-Admin/AndroidStudioProjects/MyApplication/app/src/main/res/drawable/check.xml" value="0.1" />
+        <entry key="..\:/Users/Tringapps-Admin/AndroidStudioProjects/MyApplication/app/src/main/res/drawable/custom_switch.xml" value="0.1" />
+        <entry key="..\:/Users/Tringapps-Admin/AndroidStudioProjects/MyApplication/app/src/main/res/drawable/custom_switchoff.xml" value="0.1" />
+        <entry key="..\:/Users/Tringapps-Admin/AndroidStudioProjects/MyApplication/app/src/main/res/drawable/edit.xml" value="0.1575" />
         <entry key="..\:/Users/Tringapps-Admin/AndroidStudioProjects/MyApplication/app/src/main/res/drawable/gradient.xml" value="0.1575" />
         <entry key="..\:/Users/Tringapps-Admin/AndroidStudioProjects/MyApplication/app/src/main/res/drawable/ic_android.xml" value="0.184" />
         <entry key="..\:/Users/Tringapps-Admin/AndroidStudioProjects/MyApplication/app/src/main/res/drawable/ic_launcher_background.xml" value="0.1575" />
         <entry key="..\:/Users/Tringapps-Admin/AndroidStudioProjects/MyApplication/app/src/main/res/drawable/style.xml" value="0.184" />
+        <entry key="..\:/Users/Tringapps-Admin/AndroidStudioProjects/MyApplication/app/src/main/res/drawable/style2.xml" value="0.1575" />
+        <entry key="..\:/Users/Tringapps-Admin/AndroidStudioProjects/MyApplication/app/src/main/res/drawable/thumb.xml" value="0.1" />
+        <entry key="..\:/Users/Tringapps-Admin/AndroidStudioProjects/MyApplication/app/src/main/res/drawable/track.xml" value="0.1" />
         <entry key="..\:/Users/Tringapps-Admin/AndroidStudioProjects/MyApplication/app/src/main/res/font/fontstyle.xml" value="0.16802052159042324" />
         <entry key="..\:/Users/Tringapps-Admin/AndroidStudioProjects/MyApplication/app/src/main/res/layout/activity_bound.xml" value="0.14407866609662248" />
         <entry key="..\:/Users/Tringapps-Admin/AndroidStudioProjects/MyApplication/app/src/main/res/layout/activity_broacast.xml" value="0.1" />
