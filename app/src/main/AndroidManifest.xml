@@ -19,10 +19,21 @@
         android:theme="@style/Theme.MyApplication"
         tools:targetApi="31">
         <activity
+            android:name=".Custom"
+            android:exported="false" />
+        <activity
+            android:name=".ArrayAdapt"
+            android:exported="false" />
+        <activity
+            android:name=".SimpleAdapters"
+            android:exported="false" />
+        <activity
+            android:name=".AdapterHome"
+            android:exported="false" />
+        <activity
             android:name=".Calculator"
             android:exported="false"
-            android:label="Calculator"
-            />
+            android:label="Calculator" />
         <activity
             android:name=".ThreadsDemo"
             android:exported="false" />
