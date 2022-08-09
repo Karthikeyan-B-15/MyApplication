@@ -3,6 +3,7 @@ package com.example.myapplication;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
+import android.view.Display;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ListView;
@@ -11,6 +12,8 @@ import android.widget.Toast;
 
 import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
 
 public class SimpleAdapters extends AppCompatActivity {
     ListView list;
@@ -20,15 +23,18 @@ public class SimpleAdapters extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_simple_adapters);
         list=(ListView) findViewById(R.id.list);
-        ArrayList<HashMap<String,String>> arrayList=new ArrayList<>();
+        ArrayList<HashMap<String,String>> arrayList=new ArrayList();
         for (int i=0;i<names.length;i++){
+
             HashMap<String,String> hashMap=new HashMap<>();
             hashMap.put("name",names[i]);
-            arrayList.add(hashMap);
+
+
+            arrayList.add( hashMap);
         }
-        String[] from={"name"};
+        String[] from={Model.class.getName()};
         int[] to={R.id.listtext};
-        SimpleAdapter simpleAdapter=new SimpleAdapter(this,arrayList,R.layout.listitem,from,to);
+        SimpleAdapter simpleAdapter=new SimpleAdapter(this, arrayList,R.layout.listitem,from,to);
         list.setAdapter(simpleAdapter);
         list.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override

@@ -13,7 +13,7 @@ import android.widget.Spinner;
 import android.widget.Toast;
 
 public class AdapterHome extends AppCompatActivity implements  AdapterView.OnItemSelectedListener{
-    private Button sadapt,aadapt,cadapt;
+    private Button sadapt,aadapt,cadapt,radapt,padapt;
     Spinner spin;
     String[] spinitem={"India","Pakistan","America","Russia","Japan"};
 
@@ -23,6 +23,9 @@ public class AdapterHome extends AppCompatActivity implements  AdapterView.OnIte
         setContentView(R.layout.activity_adapter_home);
         sadapt=(Button)findViewById(R.id.sadapt);
         aadapt=(Button)findViewById(R.id.aadapt);
+        cadapt=(Button)findViewById(R.id.cadapt);
+        radapt=(Button)findViewById(R.id.radapt);
+        padapt=(Button)findViewById(R.id.padapt);
         spin=(Spinner)findViewById(R.id.spin);
         ArrayAdapter<String> spinner =new ArrayAdapter<String>(this,R.layout.listitem,R.id.listtext,spinitem);
         spinner.setDropDownViewResource(R.layout.listitem);
@@ -45,6 +48,20 @@ public class AdapterHome extends AppCompatActivity implements  AdapterView.OnIte
             @Override
             public void onClick(View view) {
                 Intent intent=new Intent(AdapterHome.this, Custom.class);
+                startActivity(intent);
+            }
+        });
+        radapt.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent=new Intent(AdapterHome.this, Recycle.class);
+                startActivity(intent);
+            }
+        });
+        padapt.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent=new Intent(AdapterHome.this, PageAdapt.class);
                 startActivity(intent);
             }
         });
