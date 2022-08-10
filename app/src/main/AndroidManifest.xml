@@ -17,7 +17,21 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.MyApplication"
+        android:usesCleartextTraffic="true"
         tools:targetApi="31">
+        <activity
+            android:name=".Todo"
+            android:exported="false" />
+        <activity
+            android:name=".RecyclerHome"
+            android:exported="false" />
+        <activity
+            android:name=".Tabs"
+            android:exported="false" />
+        <activity
+            android:name=".VideoDemo"
+            android:exported="false"
+            android:theme="@style/FullScreen" />
         <activity
             android:name=".PageAdapt"
             android:exported="false" />

@@ -10,7 +10,7 @@ import android.view.WindowManager;
 import android.widget.Button;
 
 public class Home extends AppCompatActivity {
-    private Button btn1,btn2,btn3,btn4,btn5,btn6,btn7;
+    private Button btn1,btn2,btn3,btn4,btn5,btn6,btn7,btn8;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -23,6 +23,7 @@ public class Home extends AppCompatActivity {
         btn5=(Button)findViewById(R.id.btn5);
         btn6=(Button)findViewById(R.id.btn6);
         btn7=(Button)findViewById(R.id.btn7);
+        btn8=(Button)findViewById(R.id.btn8);
         btn1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -71,6 +72,13 @@ public class Home extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 Intent intent=new Intent(Home.this,AdapterHome.class);
+                startActivity(intent);
+            }
+        });
+        btn8.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent=new Intent(Home.this,RecyclerHome.class);
                 startActivity(intent);
             }
         });

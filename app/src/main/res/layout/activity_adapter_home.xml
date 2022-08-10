@@ -79,4 +79,28 @@
         android:textColor="#fff"
         app:layout_constraintStart_toStartOf="@+id/radapt"
         app:layout_constraintTop_toBottomOf="@+id/radapt" />
+
+    <Button
+        android:id="@+id/vadapt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="45dp"
+        android:background="@color/purple_500"
+        android:padding="12dp"
+        android:text="Video adapter"
+        android:textColor="#fff"
+        app:layout_constraintStart_toStartOf="@+id/padapt"
+        app:layout_constraintTop_toBottomOf="@+id/padapt" />
+
+    <Button
+        android:id="@+id/tadapt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:background="@color/purple_500"
+        android:padding="12dp"
+        android:text="Tab adapter"
+        android:textColor="#fff"
+        app:layout_constraintStart_toStartOf="@+id/vadapt"
+        app:layout_constraintTop_toBottomOf="@+id/vadapt" />
 </androidx.constraintlayout.widget.ConstraintLayout>
