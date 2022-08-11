@@ -15,13 +15,16 @@
         <!-- Customize your theme here. -->
 
     </style>
-<style name="Switch">
-    <item name="colorControlActivated">@color/primary</item>
-</style>
+
+    <style name="Switch">
+        <item name="colorControlActivated">@color/primary</item>
+    </style>
+
     <style name="Theme.MyApplication.NoActionBar">
         <item name="windowActionBar">false</item>
         <item name="windowNoTitle">true</item>
     </style>
+
     <style name="FullScreen" parent="Theme.MaterialComponents.DayNight.NoActionBar">
         <item name="windowActionBar">false</item>
         <item name="windowNoTitle">true</item>

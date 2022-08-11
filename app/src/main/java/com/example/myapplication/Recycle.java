@@ -1,6 +1,7 @@
 package com.example.myapplication;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.recyclerview.widget.GridLayoutManager;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
@@ -35,9 +36,11 @@ public class Recycle extends AppCompatActivity {
         layoutManager=new LinearLayoutManager(this);
         layoutManager.setOrientation(RecyclerView.VERTICAL);
         recyclerView.setLayoutManager(layoutManager);
+//        GridLayoutManager gridLayoutManager=new GridLayoutManager(this,2,GridLayoutManager.VERTICAL,false);
+//        recyclerView.setLayoutManager(gridLayoutManager);
         adapter=new Adapter(list);
         recyclerView.setAdapter(adapter);
-        adapter.notifyDataSetChanged();
+
 
     }
 }

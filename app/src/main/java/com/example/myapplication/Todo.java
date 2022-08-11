@@ -36,15 +36,15 @@ public class Todo extends AppCompatActivity {
         todobtn=(Button)findViewById(R.id.todobtn);
 
         todolist=new ArrayList<>();
-//        todolist.add(new TodoModel("Comple the all task"));
-//        todolist.add(new TodoModel("Comple the all task"));
+        todolist.add(new TodoModel("Comple the all task"));
+        todolist.add(new TodoModel("Comple the all task"));
         todobtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-//                todolist.add(0,new TodoModel(text.getText().toString()));
-//                todoAdapter.notifyItemInserted(0);
-                todolist.add(new TodoModel(text.getText().toString()));
-                todoAdapter.notifyDataSetChanged();
+                todolist.add(1,new TodoModel(text.getText().toString()));
+                todoAdapter.notifyItemInserted(1);
+//                todolist.add(new TodoModel(text.getText().toString()));
+//                todoAdapter.notifyDataSetChanged();
 
             }
         });

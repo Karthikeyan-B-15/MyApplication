@@ -4,30 +4,29 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".RecyclerHome">
+    tools:context=".NavHome">
 
     <Button
-        android:id="@+id/rbtn1"
+        android:id="@+id/nbtn1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
+        android:layout_marginTop="32dp"
         android:background="@color/purple_500"
-        android:text="todo"
+        android:text="Nav Basic"
         android:textColor="#fff"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <Button
-        android:id="@+id/rbtn2"
+        android:id="@+id/nbtn2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="5dp"
-        android:layout_marginTop="34dp"
+        android:layout_marginTop="32dp"
         android:background="@color/purple_500"
-        android:text="stager"
+        android:text="Drawer Navigation"
         android:textColor="#fff"
-        app:layout_constraintStart_toStartOf="@+id/rbtn1"
-        app:layout_constraintTop_toBottomOf="@+id/rbtn1" />
-
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/nbtn1" />
 </androidx.constraintlayout.widget.ConstraintLayout>
