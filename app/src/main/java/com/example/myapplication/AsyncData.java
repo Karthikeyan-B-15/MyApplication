@@ -1,6 +1,8 @@
 package com.example.myapplication;
 
 import android.os.AsyncTask;
+import android.view.View;
+import android.widget.ProgressBar;
 import android.widget.TextView;
 
 import org.json.JSONArray;
@@ -18,12 +20,21 @@ import java.util.ArrayList;
 
 import javax.xml.transform.sax.SAXResult;
 
-public class AsyncData extends AsyncTask<Void,Void,String> {
+public class AsyncData extends AsyncTask<Void,Integer,String> {
     TextView gettext;
-    AsyncData(TextView gettext){
+    ProgressBar progressBar;
+    AsyncData(TextView gettext,ProgressBar progressBar){
         this.gettext=gettext;
+        this.progressBar=progressBar;
     }
     String data1;
+
+    @Override
+    protected void onPreExecute() {
+        gettext.setText("Downloading data....");
+
+    }
+
     @Override
     protected String doInBackground(Void... voids) {
         try {
@@ -39,11 +50,24 @@ public class AsyncData extends AsyncTask<Void,Void,String> {
             while ((line=br.readLine())!=null){
                 stringBuilder.append(line);
             }
+            JSONObject root=new JSONObject(stringBuilder.toString());
+            JSONArray array=root.getJSONArray("data");
+            int size = array.length();
+            progressBar.setMax(size);
+            for (int i = 0; i < size; i++) {
+                Thread.sleep(1000);
+                publishProgress(i);
+            }
            return stringBuilder.toString();
         } catch (Exception e) {
             e.printStackTrace();
         }
         return null;
+    }
+
+    @Override
+    protected void onProgressUpdate(Integer... values) {
+        progressBar.setProgress(values[0]+1);
     }
 
     @Override
@@ -61,7 +85,6 @@ public class AsyncData extends AsyncTask<Void,Void,String> {
                 ArrayList<JSONObject> arrays = new ArrayList<JSONObject>();
                 for (int i = 0; i < size; i++) {
                     JSONObject object = array.getJSONObject(i);
-                    //Blah blah blah...
                     arrays.add(object);
                 }
                 JSONObject[] jsons = new JSONObject[arrays.size()];

@@ -23,6 +23,7 @@
         <entry key="..\:/Users/Tringapps-Admin/AndroidStudioProjects/MyApplication/app/src/main/res/layout/activity_array_adapt.xml" value="0.129115006412997" />
         <entry key="..\:/Users/Tringapps-Admin/AndroidStudioProjects/MyApplication/app/src/main/res/layout/activity_async.xml" value="0.14407866609662248" />
         <entry key="..\:/Users/Tringapps-Admin/AndroidStudioProjects/MyApplication/app/src/main/res/layout/activity_async_acitivity.xml" value="0.13253527148353997" />
+        <entry key="..\:/Users/Tringapps-Admin/AndroidStudioProjects/MyApplication/app/src/main/res/layout/activity_async_display.xml" value="0.10516772438803264" />
         <entry key="..\:/Users/Tringapps-Admin/AndroidStudioProjects/MyApplication/app/src/main/res/layout/activity_bound.xml" value="0.14407866609662248" />
         <entry key="..\:/Users/Tringapps-Admin/AndroidStudioProjects/MyApplication/app/src/main/res/layout/activity_broacast.xml" value="0.1" />
         <entry key="..\:/Users/Tringapps-Admin/AndroidStudioProjects/MyApplication/app/src/main/res/layout/activity_calcin.xml" value="0.14407866609662248" />
@@ -46,6 +47,7 @@
         <entry key="..\:/Users/Tringapps-Admin/AndroidStudioProjects/MyApplication/app/src/main/res/layout/activity_nav_home.xml" value="0.13253527148353997" />
         <entry key="..\:/Users/Tringapps-Admin/AndroidStudioProjects/MyApplication/app/src/main/res/layout/activity_navigation.xml" value="0.14007252946509519" />
         <entry key="..\:/Users/Tringapps-Admin/AndroidStudioProjects/MyApplication/app/src/main/res/layout/activity_page_adapt.xml" value="0.14407866609662248" />
+        <entry key="..\:/Users/Tringapps-Admin/AndroidStudioProjects/MyApplication/app/src/main/res/layout/activity_parallel_async.xml" value="0.1" />
         <entry key="..\:/Users/Tringapps-Admin/AndroidStudioProjects/MyApplication/app/src/main/res/layout/activity_recycle.xml" value="0.14407866609662248" />
         <entry key="..\:/Users/Tringapps-Admin/AndroidStudioProjects/MyApplication/app/src/main/res/layout/activity_recycler_home.xml" value="0.14407866609662248" />
         <entry key="..\:/Users/Tringapps-Admin/AndroidStudioProjects/MyApplication/app/src/main/res/layout/activity_scrolling.xml" value="0.14407866609662248" />
@@ -58,6 +60,7 @@
         <entry key="..\:/Users/Tringapps-Admin/AndroidStudioProjects/MyApplication/app/src/main/res/layout/activity_todo.xml" value="0.1" />
         <entry key="..\:/Users/Tringapps-Admin/AndroidStudioProjects/MyApplication/app/src/main/res/layout/activity_video_demo.xml" value="0.13253527148353997" />
         <entry key="..\:/Users/Tringapps-Admin/AndroidStudioProjects/MyApplication/app/src/main/res/layout/app_bar_navigation.xml" value="0.14007252946509519" />
+        <entry key="..\:/Users/Tringapps-Admin/AndroidStudioProjects/MyApplication/app/src/main/res/layout/asyncview.xml" value="0.12" />
         <entry key="..\:/Users/Tringapps-Admin/AndroidStudioProjects/MyApplication/app/src/main/res/layout/button.xml" value="0.14407866609662248" />
         <entry key="..\:/Users/Tringapps-Admin/AndroidStudioProjects/MyApplication/app/src/main/res/layout/calcbtn.xml" value="0.14407866609662248" />
         <entry key="..\:/Users/Tringapps-Admin/AndroidStudioProjects/MyApplication/app/src/main/res/layout/calcdisplay.xml" value="0.14322359982898675" />
@@ -80,7 +83,7 @@
         <entry key="..\:/Users/Tringapps-Admin/AndroidStudioProjects/MyApplication/app/src/main/res/layout/listitem.xml" value="0.14322359982898675" />
         <entry key="..\:/Users/Tringapps-Admin/AndroidStudioProjects/MyApplication/app/src/main/res/layout/mbtn.xml" value="0.14322359982898675" />
         <entry key="..\:/Users/Tringapps-Admin/AndroidStudioProjects/MyApplication/app/src/main/res/layout/nav_header_navigation.xml" value="0.1" />
-        <entry key="..\:/Users/Tringapps-Admin/AndroidStudioProjects/MyApplication/app/src/main/res/layout/recycleitem.xml" value="0.1" />
+        <entry key="..\:/Users/Tringapps-Admin/AndroidStudioProjects/MyApplication/app/src/main/res/layout/recycleitem.xml" value="0.3333333333333333" />
         <entry key="..\:/Users/Tringapps-Admin/AndroidStudioProjects/MyApplication/app/src/main/res/layout/relativefrag.xml" value="0.4466666666666667" />
         <entry key="..\:/Users/Tringapps-Admin/AndroidStudioProjects/MyApplication/app/src/main/res/layout/samplefrag.xml" value="0.130859375" />
         <entry key="..\:/Users/Tringapps-Admin/AndroidStudioProjects/MyApplication/app/src/main/res/layout/samplefrag2.xml" value="0.14407866609662248" />

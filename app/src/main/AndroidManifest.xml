@@ -21,6 +21,9 @@
         android:usesCleartextTraffic="true"
         tools:targetApi="31">
         <activity
+            android:name=".ParallelAsync"
+            android:exported="false" />
+        <activity
             android:name=".AsyncDisplay"
             android:exported="false" />
         <activity
@@ -28,7 +31,15 @@
             android:exported="false" />
         <activity
             android:name=".ApiHome"
-            android:exported="false" />
+            android:exported="true" >
+            <intent-filter >
+                <action android:name="android.intent.action.VIEW"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <category android:name="android.intent.category.BROWSABLE"/>
+
+                <data android:host="example"  android:scheme="http" />
+            </intent-filter>
+        </activity>
         <activity
             android:name=".NavigationActivity"
             android:exported="false"
