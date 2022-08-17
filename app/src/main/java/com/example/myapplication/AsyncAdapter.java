@@ -1,5 +1,6 @@
 package com.example.myapplication;
 
+import android.content.Context;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.media.Image;
@@ -21,9 +22,11 @@ import java.util.List;
 
 public class AsyncAdapter extends RecyclerView.Adapter<AsyncAdapter.ViewHolder> {
     List<AsyncModel> alist;
+    Context context;
 
-    public AsyncAdapter(List<AsyncModel> alist) {
+    public AsyncAdapter(List<AsyncModel> alist,Context context) {
         this.alist = alist;
+        this.context=context;
     }
     String url;
     @NonNull
@@ -35,11 +38,13 @@ public class AsyncAdapter extends RecyclerView.Adapter<AsyncAdapter.ViewHolder> 
 
     @Override
     public void onBindViewHolder(@NonNull AsyncAdapter.ViewHolder holder, int position) {
+
         holder.fname.setText(alist.get(position).getFirstName());
         holder.lname.setText(alist.get(position).getLastName());
         holder.email.setText(alist.get(position).getEmail());
         url=alist.get(position).getImgurl();
         Glide.with(holder.aimg.getContext()).load(url).into(holder.aimg);
+
     }
 
     @Override

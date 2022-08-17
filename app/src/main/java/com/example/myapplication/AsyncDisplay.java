@@ -65,7 +65,7 @@ public class AsyncDisplay extends AppCompatActivity {
         layoutManager=new LinearLayoutManager(this);
         layoutManager.setOrientation(RecyclerView.VERTICAL);
         recyclerView.setLayoutManager(layoutManager);
-        adapter=new AsyncAdapter(alist);
+        adapter=new AsyncAdapter(alist,this);
         recyclerView.setAdapter(adapter);
     }
     public static Drawable LoadImage(String url) {
