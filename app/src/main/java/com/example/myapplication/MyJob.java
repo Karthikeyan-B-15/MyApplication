@@ -8,46 +8,61 @@ import android.util.Log;
 
 public class MyJob extends JobService {
     JobAsync jobAsync;
+    JobParameters jobParameters;
+    boolean check=false;
+    boolean jobCanelled=false;
     @Override
     public boolean onStartJob(JobParameters jobParameters) {
-        jobAsync=new JobAsync(jobParameters);
+        check=true;
+        this.jobParameters=jobParameters;
+        jobAsync=new JobAsync();
         jobAsync.execute();
-        jobFinished(jobParameters,false);
         return true;
     }
 
     @Override
     public boolean onStopJob(JobParameters jobParameters) {
         jobAsync.cancel(true);
-        return false;
+        jobCanelled=true;
+        return true;
     }
-    public class JobAsync extends AsyncTask<Void,Void,Void>{
-        int count=0;
-        JobParameters jobParameters;
-        JobAsync(JobParameters jobParameters){
-            this.jobParameters=jobParameters;
-        }
+    public class JobAsync extends AsyncTask<Void, Void, Void> {
+
 
         @Override
         protected Void doInBackground(Void... voids) {
-            while (true) {
-                try {
-                    Thread.sleep(1000);
-                    if(true) {
+            int count=0;
+            while (check){
+                try {Thread.sleep(1000);
+                    if(check) {
+
                         count++;
+                        Log.i("demo1", String.valueOf(count));
                         Intent intent = new Intent("com.myapp.broad_cast_receiver3");
                         intent.putExtra("jobval", count);
                         sendBroadcast(intent);
-                        Log.i("demo1", "broadcast receiver for ServiceB" + String.valueOf(intent.getIntExtra("jobval", 0)));
 
                     }
-                } catch (Exception e) {
+                } catch (InterruptedException e) {
                     e.printStackTrace();
                 }
 
             }
 
+            if (jobCanelled) {
+                jobFinished(jobParameters, false);
+            }
+    return null;
         }
     }
+    public void onStop(){
+        check=false;
     }
+
+    @Override
+    public void onDestroy() {
+        super.onDestroy();
+        onStop();
+    }
+}
 

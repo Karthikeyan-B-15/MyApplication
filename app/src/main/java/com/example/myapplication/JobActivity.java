@@ -18,14 +18,14 @@ import android.widget.TextView;
 
 public class JobActivity extends AppCompatActivity {
     TextView jtxt;
-    Button jbtn;
+    Button jbtn,jbtn2;
     String jobval;
     JobScheduler jobScheduler;
     BroadcastReceiver  br=new BroadcastReceiver() {
         @Override
         public void onReceive(Context context, Intent intent) {
             if(intent.getAction().equals("com.myapp.broad_cast_receiver3")) {
-                jobval=String.valueOf(intent.getIntExtra("jobval", 0));
+                jtxt.setText(String.valueOf(intent.getIntExtra("jobval", 0)));
             }
         }
     };
@@ -36,11 +36,22 @@ public class JobActivity extends AppCompatActivity {
         setContentView(R.layout.activity_job);
         jtxt=(TextView) findViewById(R.id.jtxt);
         jbtn=(Button) findViewById(R.id.jbtn1);
+        jbtn2=(Button) findViewById(R.id.jbtn2);
+        jobScheduler=(JobScheduler) getSystemService(JOB_SCHEDULER_SERVICE);
+
         jbtn.setOnClickListener(new View.OnClickListener() {
 
             @Override
             public void onClick(View view) {
+                jbtn.setEnabled(false);
                 startjob();
+            }
+        });
+        jbtn2.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                jbtn.setEnabled(true);
+                jobScheduler.cancel(100);
             }
         });
 
@@ -49,18 +60,14 @@ public class JobActivity extends AppCompatActivity {
     public void startjob(){
         ComponentName componentName=new ComponentName(this,MyJob.class);
         jobInfo=new JobInfo.Builder(100,componentName)
-                .setRequiredNetworkType(JobInfo.NETWORK_TYPE_CELLULAR)
+                .setRequiredNetworkType(JobInfo.NETWORK_TYPE_ANY)
                 .setPeriodic(15*60*1000)
                 .setRequiresCharging(false)
                 .setPersisted(true)
                 .build();
-        jobScheduler=(JobScheduler) getSystemService(JOB_SCHEDULER_SERVICE);
-        if(jobScheduler.schedule(jobInfo)==JobScheduler.RESULT_SUCCESS){
-            jtxt.setText(jobval);
-        }
-        else{
-            jobScheduler.cancel(100);
-        }
+        jobScheduler.schedule(jobInfo);
+
+
     }
 
 
