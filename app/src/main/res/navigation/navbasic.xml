@@ -12,7 +12,8 @@
         tools:layout="@layout/fragment_blank" >
         <action
             android:id="@+id/action_blankFragment_to_regFrag"
-            app:destination="@id/regFrag" />
+            app:destination="@id/regFrag"
+            app:enterAnim="@anim/to_right" />
         <action
             android:id="@+id/action_blankFragment_to_homeFrag"
             app:destination="@id/homeFrag" />
@@ -24,7 +25,9 @@
         tools:layout="@layout/fragment_reg" >
         <action
             android:id="@+id/action_regFrag_to_blankFragment"
-            app:destination="@id/blankFragment" />
+            app:destination="@id/blankFragment"
+            app:enterAnim="@anim/from_left"
+          />
     </fragment>
     <fragment
         android:id="@+id/homeFrag"

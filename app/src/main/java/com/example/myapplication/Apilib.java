@@ -26,6 +26,8 @@ public class Apilib extends AppCompatActivity {
     List<AsyncModel> alist;
     LinearLayoutManager layoutManager;
     AsyncAdapter adapter;
+    AsyncModel asyncModel;
+    DBHelper dbHelper=new DBHelper(Apilib.this);;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -46,18 +48,21 @@ public class Apilib extends AppCompatActivity {
                     JSONArray array=response.getJSONArray("data");
                     for (int i=0;i<array.length();i++){
                        JSONObject object=array.getJSONObject(i);
-                       alist.add(new AsyncModel(object.getString("first_name"),
+                      asyncModel= new AsyncModel(Integer.parseInt(object.getString("id")),object.getString("first_name"),
                                object.getString("last_name"),
                                object.getString("email"),
-                               object.getString("avatar")));
+                               object.getString("avatar"));
+
+                      dbHelper.addData(asyncModel);
                     }
                 } catch (JSONException e) {
                     e.printStackTrace();
                 }
+
                 layoutManager=new LinearLayoutManager(Apilib.this);
                 layoutManager.setOrientation(RecyclerView.VERTICAL);
                 recyclerView.setLayoutManager(layoutManager);
-                adapter=new AsyncAdapter(alist,Apilib.this);
+                adapter=new AsyncAdapter(dbHelper.getAllData(),Apilib.this);
                 recyclerView.setAdapter(adapter);
             }
         }, new Response.ErrorListener() {

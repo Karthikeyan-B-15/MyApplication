@@ -10,9 +10,10 @@
         android:id="@+id/sbtn1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="81dp"
+        android:layout_marginTop="36dp"
         android:text="Service Example"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -20,7 +21,7 @@
         android:id="@+id/sbtn4"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="60dp"
+        android:layout_marginTop="48dp"
         android:text="Bound Service"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -30,9 +31,10 @@
         android:id="@+id/sbtn5"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="89dp"
+        android:layout_marginTop="32dp"
         android:text="Foreground Service"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/sbtn4" />
 
@@ -40,9 +42,10 @@
         android:id="@+id/sbtn6"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="54dp"
+        android:layout_marginTop="28dp"
         android:text="Thread"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/sbtn5" />
 
@@ -61,8 +64,27 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="32dp"
-        android:layout_marginEnd="15dp"
+        android:layout_marginEnd="12dp"
         android:text="work manager"
         app:layout_constraintEnd_toEndOf="@+id/sbtn7"
         app:layout_constraintTop_toBottomOf="@+id/sbtn7" />
+
+    <Button
+        android:id="@+id/sbtn9"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="27dp"
+        android:text="threading in work"
+        app:layout_constraintEnd_toEndOf="@+id/sbtn8"
+        app:layout_constraintTop_toBottomOf="@+id/sbtn8" />
+
+    <Button
+        android:id="@+id/sbtn10"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="28dp"
+        android:text="Listenable thread"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/sbtn9" />
 </androidx.constraintlayout.widget.ConstraintLayout>

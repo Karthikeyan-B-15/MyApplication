@@ -12,11 +12,15 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
+import android.widget.EditText;
+import android.widget.TextView;
 
 
 public class BlankFragment extends Fragment {
-
+TextView ltext;
 Button navlog,navreg;
+EditText loguser,logpass;
+DBHandler dbHandler;
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
@@ -29,17 +33,32 @@ Button navlog,navreg;
         super.onViewCreated(view, savedInstanceState);
         navlog=view.findViewById(R.id.navlog);
         navreg=view.findViewById(R.id.navreg);
+        logpass=view.findViewById(R.id.logpass);
+        loguser=view.findViewById(R.id.loguser);
+        ltext=view.findViewById(R.id.ltext);
         NavController navController= Navigation.findNavController(view);
         navreg.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 navController.navigate(R.id.action_blankFragment_to_regFrag);
+
             }
         });
         navlog.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                navController.navigate(R.id.action_blankFragment_to_homeFrag);
+                dbHandler=new DBHandler(getContext());
+                if(dbHandler.checkUser(loguser.getText().toString())) {
+                    RegisterModel registerModel=dbHandler.details(loguser.getText().toString());
+                    Bundle bundle=new Bundle();
+                    bundle.putString("user",registerModel.getUser());
+                    bundle.putString("phone",registerModel.getNumber());
+                    navController.navigate(R.id.action_blankFragment_to_homeFrag,bundle);
+
+                }
+                else{
+                    ltext.setText("This account does not exist !!");
+                }
             }
         });
 

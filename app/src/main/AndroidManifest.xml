@@ -23,6 +23,12 @@
         android:usesCleartextTraffic="true"
         tools:targetApi="31">
         <activity
+            android:name=".ListenThread"
+            android:exported="false" />
+        <activity
+            android:name=".ThreadWork"
+            android:exported="false"></activity>
+        <activity
             android:name=".WorkActivity"
             android:exported="false" />
 
@@ -195,7 +201,11 @@
 
         <service android:name=".Mservice" />
         <service android:name=".BoundService" />
-        <service android:name=".ServiceB" />
+        <service android:name=".ServiceB" /> <!-- If you want to disable android.startup completely. -->
+        <provider
+            android:name="androidx.startup.InitializationProvider"
+            android:authorities="${applicationId}.androidx-startup"
+            tools:node="remove"></provider>
 
         <receiver
             android:name=".MyBroadCast"
