@@ -78,4 +78,9 @@ public class JobActivity extends AppCompatActivity {
         filter.addAction("com.myapp.broad_cast_receiver3");
         registerReceiver(br, filter);
     }
+    @Override
+    protected void onStop() {
+        super.onStop();
+        unregisterReceiver(br);
+    }
 }

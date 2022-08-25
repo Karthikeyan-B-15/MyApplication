@@ -13,7 +13,7 @@ import android.widget.Toast;
 import java.util.List;
 
 public class ApiHome extends AppCompatActivity {
-    private Button asyncbtn,pasync,apibtn;
+    private Button asyncbtn,pasync,apibtn,databtn;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -21,6 +21,7 @@ public class ApiHome extends AppCompatActivity {
         asyncbtn=(Button) findViewById(R.id.asyncbtn);
         pasync=(Button) findViewById(R.id.pasync);
         apibtn=(Button) findViewById(R.id.apibtn);
+        databtn=(Button) findViewById(R.id.databtn);
         Intent intent=getIntent();
         String action=intent.getAction();
         Uri data =intent.getData();
@@ -47,6 +48,13 @@ public class ApiHome extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 Intent intent =new Intent(ApiHome.this,Apilib.class);
+                startActivity(intent);
+            }
+        });
+        databtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent =new Intent(ApiHome.this,SharedData.class);
                 startActivity(intent);
             }
         });
