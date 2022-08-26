@@ -7,7 +7,7 @@ import android.os.Bundle;
 import android.widget.EditText;
 
 public class SharedData extends AppCompatActivity {
-    EditText stext;
+    private EditText stext;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -18,16 +18,18 @@ public class SharedData extends AppCompatActivity {
     @Override
     protected void onResume() {
         super.onResume();
-        SharedPreferences res=getSharedPreferences("sharedpref",)
+        SharedPreferences res=getSharedPreferences("sharedpref",MODE_PRIVATE);
+        String sres=res.getString("sname","");
+        stext.setText(sres);
     }
 
     @Override
     protected void onPause() {
         super.onPause();
         SharedPreferences sharedPreferences=getSharedPreferences("sharedpref",MODE_PRIVATE);
-        SharedPreferences.Editor edit=sharedPreferences.edit();
-        edit.putString("sname",stext.getText().toString());
-        edit.apply();
+        SharedPreferences.Editor myedit=sharedPreferences.edit();
+        myedit.putString("sname",stext.getText().toString());
+        myedit.apply();
 
     }
 }
