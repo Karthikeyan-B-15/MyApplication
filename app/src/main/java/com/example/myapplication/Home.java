@@ -39,6 +39,7 @@ public class Home extends AppCompatActivity {
         griditem.add(new HomeModel("Recycler"));
         griditem.add(new HomeModel("Navigation"));
         griditem.add(new HomeModel("API"));
+        griditem.add(new HomeModel("MVVM"));
         setOnClickLister();
         gridLayoutManager=new GridLayoutManager(this,2,GridLayoutManager.VERTICAL,false);
         recyclerView.setLayoutManager(gridLayoutManager);
@@ -94,6 +95,10 @@ public class Home extends AppCompatActivity {
                     case "API":
                         Intent intent9=new Intent(Home.this,ApiHome.class);
                         startActivity(intent9);
+                        break;
+                    case "MVVM":
+                        Intent intent10=new Intent(Home.this,MView.class);
+                        startActivity(intent10);
                         break;
                     default:
                 }

@@ -23,6 +23,12 @@
         android:usesCleartextTraffic="true"
         tools:targetApi="31">
         <activity
+            android:name=".MView"
+            android:exported="false" />
+        <activity
+            android:name=".MViewBinding"
+            android:exported="false" />
+        <activity
             android:name=".SharedData"
             android:exported="false" />
         <activity
