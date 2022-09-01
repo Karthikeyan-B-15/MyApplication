@@ -32,10 +32,10 @@ public class Counter extends Worker {
     }
     public void countTheNumber(){
 
-        while ( iscount){
+        while ( iscount && count<10){
             try {
                 Thread.sleep(1000);
-                if(iscount){
+                if(iscount ){
                     count++;
                     Log.d("count", String.valueOf(count));
 
@@ -48,11 +48,17 @@ public class Counter extends Worker {
         }
     }
 
-    @Override
-    public void onStopped() {
-        super.onStopped();
-        iscount=false;
-        Log.d("count","Counter stopped");
-    }
+//    @Override
+//    public void onStopped() {
+//        super.onStopped();
+//        try {
+//            iscount=false;
+//            Log.d("count","Counter stopped");
+//        }catch (Exception e){
+//            Log.d("count",String.valueOf(e));
+//        }
+//
+//    }
+
 
 }

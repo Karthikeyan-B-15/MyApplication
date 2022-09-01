@@ -3,6 +3,7 @@ package com.example.myapplication;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.work.Constraints;
+import androidx.work.ExistingPeriodicWorkPolicy;
 import androidx.work.NetworkType;
 import androidx.work.PeriodicWorkRequest;
 import androidx.work.WorkManager;
@@ -19,7 +20,7 @@ public class ThreadWork extends AppCompatActivity  {
     Button twbtn1,twbtn2;
     WorkManager workManager;
     Constraints constraints;
-    WorkRequest workRequest;
+    PeriodicWorkRequest workRequest;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -34,18 +35,20 @@ public class ThreadWork extends AppCompatActivity  {
         constraints=new Constraints.Builder()
                 .setRequiredNetworkType(NetworkType.UNMETERED)
                 .build();
-        workRequest=new PeriodicWorkRequest.Builder(Counter2.class,5, TimeUnit.SECONDS)
-                .setConstraints(constraints).build();
+        workRequest=new PeriodicWorkRequest.Builder(Counter2.class,15, TimeUnit.SECONDS)
+                .setConstraints(constraints).addTag("counter").build();
+
         twbtn1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                workManager.enqueue(workRequest);
+                workManager.enqueueUniquePeriodicWork("counter", ExistingPeriodicWorkPolicy.KEEP,workRequest);
+                ;
             }
         });
         twbtn2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                workManager.cancelAllWork();
+                workManager.cancelUniqueWork("counter");
             }
         });
     }

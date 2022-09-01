@@ -13,6 +13,7 @@ import androidx.work.WorkRequest;
 
 import android.media.VolumeShaper;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 
@@ -25,7 +26,8 @@ import java.util.concurrent.TimeUnit;
 public class WorkActivity extends AppCompatActivity {
     WorkManager workManager;
     Constraints constraints;
-    WorkRequest workRequest,workRequest1,workRequest2,workRequest3;
+    PeriodicWorkRequest workRequest;
+    WorkRequest workRequest1,workRequest2,workRequest3;
     Button wbtn1,wbtn2;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -45,12 +47,12 @@ public class WorkActivity extends AppCompatActivity {
         wbtn1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                workManager.enqueue(workRequest);
+//                workManager.enqueue(workRequest);
 
-//                workManager.enqueueUniquePeriodicWork("work",
-//                        ExistingPeriodicWorkPolicy.KEEP,
-//                        workRequest
-//                        );
+                workManager.enqueueUniquePeriodicWork("work",
+                        ExistingPeriodicWorkPolicy.REPLACE,
+                        workRequest
+                        );
 //                workManager.beginWith((OneTimeWorkRequest) workRequest1)
 //                        .then((OneTimeWorkRequest) workRequest2)
 //                        .then((OneTimeWorkRequest) workRequest3).enqueue();
@@ -60,9 +62,12 @@ public class WorkActivity extends AppCompatActivity {
         wbtn2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                  workManager.cancelAllWork();
+//                  workManager.cancelAllWork();
 //                workManager.cancelWorkById(workRequest.getId());
-//                workManager.cancelUniqueWork("work");
+
+                    workManager.cancelUniqueWork("work");
+
+
 //                workManager.cancelAllWorkByTag("worker2");
             }
         });

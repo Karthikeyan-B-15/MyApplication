@@ -56,19 +56,19 @@
             android:name=".Orient"
             android:exported="false" />
         <activity
-            android:name=".Apilib"
+            android:name=".api.volley.Apilib"
             android:exported="false" />
         <activity
-            android:name=".ParallelAsync"
+            android:name=".api.ParallelAsync"
             android:exported="false" />
         <activity
-            android:name=".AsyncDisplay"
+            android:name=".api.asynctask.AsyncDisplay"
             android:exported="false" />
         <activity
-            android:name=".AsyncActivity"
+            android:name=".api.asynctask.AsyncActivity"
             android:exported="false" />
         <activity
-            android:name=".ApiHome"
+            android:name=".api.ApiHome"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.VIEW" />
@@ -87,47 +87,47 @@
             android:label="@string/title_activity_navigation"
             android:theme="@style/Theme.MyApplication.NoActionBar" />
         <activity
-            android:name=".NavBasic"
+            android:name=".navigation.basics.NavBasic"
             android:exported="false" />
         <activity
-            android:name=".NavHome"
+            android:name=".navigation.NavHome"
             android:exported="false" />
         <activity
-            android:name=".Stager"
+            android:name=".recycler.stager.Stager"
             android:exported="false" />
         <activity
-            android:name=".Todo"
+            android:name=".recycler.todo.Todo"
             android:exported="false" />
         <activity
             android:name=".RecyclerHome"
             android:exported="false" />
         <activity
-            android:name=".Tabs"
+            android:name=".adapters.tabadapt.Tabs"
             android:exported="false" />
         <activity
-            android:name=".VideoDemo"
+            android:name=".adapters.video.VideoDemo"
             android:exported="false"
             android:theme="@style/FullScreen" />
         <activity
-            android:name=".PageAdapt"
+            android:name=".adapters.pager.PageAdapt"
             android:exported="false" />
         <activity
-            android:name=".Recycle"
+            android:name=".adapters.recycle.Recycle"
             android:exported="false" />
         <activity
-            android:name=".Custom"
+            android:name=".adapters.customadapt.Custom"
             android:exported="false" />
         <activity
-            android:name=".ArrayAdapt"
+            android:name=".adapters.ArrayAdapt"
             android:exported="false" />
         <activity
-            android:name=".SimpleAdapters"
+            android:name=".adapters.SimpleAdapters"
             android:exported="false" />
         <activity
-            android:name=".AdapterHome"
+            android:name=".adapters.AdapterHome"
             android:exported="false" />
         <activity
-            android:name=".Calculator"
+            android:name=".calc.Calculator"
             android:exported="false"
             android:label="Calculator" />
         <activity
@@ -163,16 +163,16 @@
             android:name=".ForegroundService"
             android:exported="false" />
         <activity
-            android:name=".Broacast"
+            android:name=".broadcast.Broacast"
             android:exported="false" />
         <activity
-            android:name=".Bound"
+            android:name=".services.bound.Bound"
             android:exported="false" />
         <activity
-            android:name=".ExpService"
+            android:name=".services.exmple.ExpService"
             android:exported="false" />
         <activity
-            android:name=".ServiceHome"
+            android:name=".services.ServiceHome"
             android:exported="false" />
         <activity
             android:name=".FragHome"
@@ -184,42 +184,42 @@
             android:name=".FragMain"
             android:exported="false" />
         <activity
-            android:name=".Home"
+            android:name=".home.Home"
             android:exported="true" />
         <activity
-            android:name=".calcout"
+            android:name=".calc.calcout"
             android:exported="false" />
         <activity
-            android:name=".calcin"
+            android:name=".calc.calcin"
             android:exported="false" />
         <activity
-            android:name=".Login"
+            android:name=".activity.Login"
             android:exported="false" />
         <activity
-            android:name=".MainActivity3"
+            android:name=".activity.MainActivity3"
             android:exported="false"
             android:launchMode="singleInstance" />
         <activity
-            android:name=".MainActivity"
+            android:name=".activity.MainActivity"
             android:alwaysRetainTaskState="true"
             android:configChanges="screenSize|orientation|keyboardHidden"
             android:exported="false"
             android:launchMode="standard" />
         <activity
-            android:name=".MainActivity2"
+            android:name=".activity.MainActivity2"
             android:allowTaskReparenting="false"
-            android:parentActivityName=".MainActivity"
+            android:parentActivityName=".activity.MainActivity"
             android:taskAffinity="com.example.myapplication.affinity" />
 
-        <service android:name=".Mservice" />
-        <service android:name=".BoundService" />
-        <service android:name=".ServiceB" /> <!-- If you want to disable android.startup completely. -->
+        <service android:name=".services.exmple.Mservice" />
+        <service android:name=".services.bound.BoundService" />
+        <service android:name=".services.ServiceB" /> <!-- If you want to disable android.startup completely. -->
         <!-- <provider -->
         <!-- android:name="androidx.startup.InitializationProvider" -->
         <!-- android:authorities="${applicationId}.androidx-startup" -->
         <!-- tools:node="remove"></provider> -->
         <receiver
-            android:name=".MyBroadCast"
+            android:name=".broadcast.MyBroadCast"
             android:exported="true">
 
             <!-- <intent-filter> -->

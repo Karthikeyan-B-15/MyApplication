@@ -4,8 +4,11 @@ import android.content.Context;
 import android.util.Log;
 
 import androidx.annotation.NonNull;
+import androidx.work.ListenableWorker;
 import androidx.work.Worker;
 import androidx.work.WorkerParameters;
+
+import java.util.concurrent.CancellationException;
 
 public class Counter2 extends Worker {
     Context context;
@@ -16,16 +19,23 @@ public class Counter2 extends Worker {
         super(context, workerParams);
         this.context=context;
         this.workerParameters=workerParams;
-        iscount=true;
+
     }
 
     @NonNull
     @Override
     public Result doWork() {
-        countTheNumber();
+        iscount =true;
+        try {
+            countTheNumber(iscount);
+        }catch (Exception e){
+            e.printStackTrace();
+            return Result.failure();
+        }
+
         return Result.success();
     }
-    public void countTheNumber(){
+    public void countTheNumber(Boolean iscount){
         int i=0;
         while (i<5 && iscount){
             try {
@@ -36,8 +46,9 @@ public class Counter2 extends Worker {
 
                 }
 
-            }catch (Exception e){
-                Log.d("count","thread interupt");
+            }catch (CancellationException | InterruptedException e){
+                e.printStackTrace();
+                Log.d("count",String.valueOf(e));
             }
             i++;
         }
@@ -47,6 +58,8 @@ public class Counter2 extends Worker {
     public void onStopped() {
         super.onStopped();
         iscount=false;
+        countTheNumber(iscount);
         Log.d("count","Counter stopped");
     }
+
 }

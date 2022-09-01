@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ExpService">
+    tools:context=".services.exmple.ExpService">
 
     <Button
         android:id="@+id/sbtn2"

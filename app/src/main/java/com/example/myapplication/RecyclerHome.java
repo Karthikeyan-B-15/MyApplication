@@ -7,6 +7,9 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 
+import com.example.myapplication.recycler.stager.Stager;
+import com.example.myapplication.recycler.todo.Todo;
+
 public class RecyclerHome extends AppCompatActivity {
     Button rbtn1,rbtn2;
     @Override
@@ -18,14 +21,14 @@ public class RecyclerHome extends AppCompatActivity {
         rbtn1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent =new Intent(RecyclerHome.this,Todo.class);
+                Intent intent =new Intent(RecyclerHome.this, Todo.class);
                 startActivity(intent);
             }
         });
         rbtn2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent =new Intent(RecyclerHome.this,Stager.class);
+                Intent intent =new Intent(RecyclerHome.this, Stager.class);
                 startActivity(intent);
             }
         });

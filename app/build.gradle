@@ -69,6 +69,10 @@ dependencies {
     def work_version = "2.7.1"
     implementation "androidx.work:work-runtime:$work_version"
     implementation "androidx.concurrent:concurrent-futures:1.1.0"
+    def daggerVer = 2.27
+    implementation "com.google.dagger:dagger:$daggerVer"
+    annotationProcessor "com.google.dagger:dagger-compiler:$daggerVer"
+    annotationProcessor "com.google.dagger:dagger-android-processor:$daggerVer"
 
 
 }
