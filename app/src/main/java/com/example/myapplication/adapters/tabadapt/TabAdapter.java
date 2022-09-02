@@ -5,9 +5,9 @@ import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentActivity;
 import androidx.viewpager2.adapter.FragmentStateAdapter;
 
-import com.example.myapplication.Fragments2;
-import com.example.myapplication.Fragments3;
-import com.example.myapplication.Frags;
+import com.example.myapplication.fragments.Fragments2;
+import com.example.myapplication.fragments.Fragments3;
+import com.example.myapplication.fragments.Frags;
 
 public class TabAdapter extends FragmentStateAdapter {
     public TabAdapter(@NonNull FragmentActivity fragmentActivity) {

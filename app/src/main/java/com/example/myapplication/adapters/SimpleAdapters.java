@@ -9,7 +9,6 @@ import android.widget.ListView;
 import android.widget.SimpleAdapter;
 import android.widget.Toast;
 
-import com.example.myapplication.Model;
 import com.example.myapplication.R;
 
 import java.util.ArrayList;

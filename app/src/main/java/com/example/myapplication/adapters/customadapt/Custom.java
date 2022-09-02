@@ -5,7 +5,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
 import android.widget.ListView;
 
-import com.example.myapplication.Data;
+import com.example.myapplication.adapters.pager.Data;
 import com.example.myapplication.R;
 
 import java.util.ArrayList;

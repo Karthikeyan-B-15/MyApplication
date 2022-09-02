@@ -8,7 +8,7 @@ import android.view.View;
 import android.widget.Button;
 
 import com.example.myapplication.navigation.basics.NavBasic;
-import com.example.myapplication.NavigationActivity;
+import com.example.myapplication.navigation.drawer.ui.NavigationActivity;
 import com.example.myapplication.R;
 
 public class NavHome extends AppCompatActivity {

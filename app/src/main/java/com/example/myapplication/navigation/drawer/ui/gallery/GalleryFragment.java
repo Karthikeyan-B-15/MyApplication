@@ -11,9 +11,9 @@ import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
 import androidx.lifecycle.ViewModelProvider;
 
-import com.example.myapplication.Fragments2;
-import com.example.myapplication.Fragments3;
-import com.example.myapplication.Frags;
+import com.example.myapplication.fragments.Fragments2;
+import com.example.myapplication.fragments.Fragments3;
+import com.example.myapplication.fragments.Frags;
 import com.example.myapplication.R;
 import com.example.myapplication.databinding.FragmentGalleryBinding;
 import com.google.android.material.navigation.NavigationBarView;

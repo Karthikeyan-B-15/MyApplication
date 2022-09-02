@@ -1,8 +1,6 @@
 package com.example.myapplication.adapters.customadapt;
 
-import android.annotation.SuppressLint;
 import android.content.Context;
-import android.provider.ContactsContract;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -13,11 +11,10 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 
-import com.example.myapplication.Data;
+import com.example.myapplication.adapters.pager.Data;
 import com.example.myapplication.R;
 
 import java.util.ArrayList;
-import java.util.List;
 
 public class CustomAdapter extends ArrayAdapter<Data> {
     ArrayList<Data> arrayList=new ArrayList<>();

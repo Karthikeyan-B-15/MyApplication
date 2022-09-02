@@ -12,7 +12,7 @@ import android.util.Log;
 import androidx.annotation.Nullable;
 import androidx.annotation.RequiresApi;
 
-import com.example.myapplication.App;
+import com.example.myapplication.services.App;
 import com.example.myapplication.R;
 
 public class BoundService extends Service {

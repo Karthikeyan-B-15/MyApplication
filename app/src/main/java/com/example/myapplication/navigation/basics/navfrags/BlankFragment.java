@@ -15,9 +15,9 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
 
-import com.example.myapplication.DBHandler;
+import com.example.myapplication.navigation.basics.DBHandler;
 import com.example.myapplication.R;
-import com.example.myapplication.RegisterModel;
+import com.example.myapplication.navigation.basics.RegisterModel;
 
 
 public class BlankFragment extends Fragment {

@@ -7,13 +7,10 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 
-import com.example.myapplication.ForegroundService;
-import com.example.myapplication.JobActivity;
-import com.example.myapplication.ListenThread;
+import com.example.myapplication.services.jobscheduler.JobActivity;
+import com.example.myapplication.services.listenableworker.ListenThread;
 import com.example.myapplication.R;
-import com.example.myapplication.ThreadWork;
-import com.example.myapplication.ThreadsDemo;
-import com.example.myapplication.WorkActivity;
+import com.example.myapplication.services.workmanager.WorkActivity;
 import com.example.myapplication.services.bound.Bound;
 import com.example.myapplication.services.exmple.ExpService;
 

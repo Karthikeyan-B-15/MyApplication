@@ -12,13 +12,13 @@ import android.widget.Button;
 import com.example.myapplication.adapters.AdapterHome;
 import com.example.myapplication.api.ApiHome;
 import com.example.myapplication.calc.Calculator;
-import com.example.myapplication.FragHome;
-import com.example.myapplication.Layout;
+import com.example.myapplication.fragments.FragHome;
+import com.example.myapplication.layout.Layout;
 import com.example.myapplication.activity.Login;
-import com.example.myapplication.MView;
+import com.example.myapplication.mvvm.MView;
 import com.example.myapplication.navigation.NavHome;
 import com.example.myapplication.R;
-import com.example.myapplication.RecyclerHome;
+import com.example.myapplication.recycler.RecyclerHome;
 import com.example.myapplication.services.ServiceHome;
 import com.example.myapplication.broadcast.Broacast;
 

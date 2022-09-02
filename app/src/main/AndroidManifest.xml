@@ -11,7 +11,7 @@
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
 
     <application
-        android:name=".App"
+        android:name=".services.App"
         android:allowBackup="true"
         android:dataExtractionRules="@xml/data_extraction_rules"
         android:fullBackupContent="@xml/backup_rules"
@@ -23,37 +23,37 @@
         android:usesCleartextTraffic="true"
         tools:targetApi="31">
         <activity
-            android:name=".MDataBinding"
+            android:name=".mvvm.MDataBinding"
             android:exported="false" />
         <activity
-            android:name=".MView"
+            android:name=".mvvm.MView"
             android:exported="false" />
         <activity
-            android:name=".MViewBinding"
+            android:name=".mvvm.MViewBinding"
             android:exported="false" />
         <activity
             android:name=".SharedData"
             android:exported="false" />
         <activity
-            android:name=".ListenThread"
+            android:name=".services.listenableworker.ListenThread"
             android:exported="false" />
         <activity
-            android:name=".ThreadWork"
+            android:name=".services.ThreadWork"
             android:exported="false" />
         <activity
-            android:name=".WorkActivity"
+            android:name=".services.workmanager.WorkActivity"
             android:exported="false" />
 
         <service
-            android:name=".MyJob"
+            android:name=".services.jobscheduler.MyJob"
             android:exported="true"
             android:permission="android.permission.BIND_JOB_SERVICE" />
 
         <activity
-            android:name=".JobActivity"
+            android:name=".services.jobscheduler.JobActivity"
             android:exported="false" />
         <activity
-            android:name=".Orient"
+            android:name=".layout.Orient"
             android:exported="false" />
         <activity
             android:name=".api.volley.Apilib"
@@ -82,7 +82,7 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".NavigationActivity"
+            android:name=".navigation.drawer.ui.NavigationActivity"
             android:exported="false"
             android:label="@string/title_activity_navigation"
             android:theme="@style/Theme.MyApplication.NoActionBar" />
@@ -99,7 +99,7 @@
             android:name=".recycler.todo.Todo"
             android:exported="false" />
         <activity
-            android:name=".RecyclerHome"
+            android:name=".recycler.RecyclerHome"
             android:exported="false" />
         <activity
             android:name=".adapters.tabadapt.Tabs"
@@ -131,10 +131,10 @@
             android:exported="false"
             android:label="Calculator" />
         <activity
-            android:name=".ThreadsDemo"
+            android:name=".services.ThreadsDemo"
             android:exported="false" />
         <activity
-            android:name=".SplashScreen"
+            android:name=".layout.SplashScreen"
             android:exported="true"
             android:theme="@style/Theme.AppCompat.Light.NoActionBar">
             <intent-filter>
@@ -144,7 +144,7 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".LayoutExample"
+            android:name=".layout.LayoutExample"
             android:configChanges="screenSize|orientation|smallestScreenSize|screenLayout"
             android:exported="false"
             android:supportsPictureInPicture="true" />
@@ -154,13 +154,13 @@
             android:label="@string/title_activity_scrolling"
             android:theme="@style/Theme.MyApplication.NoActionBar" />
         <activity
-            android:name=".Layout"
+            android:name=".layout.Layout"
             android:exported="false" />
         <activity
-            android:name=".LayoutHome"
+            android:name=".layout.LayoutHome"
             android:exported="false" />
         <activity
-            android:name=".ForegroundService"
+            android:name=".services.ForegroundService"
             android:exported="false" />
         <activity
             android:name=".broadcast.Broacast"
@@ -175,13 +175,13 @@
             android:name=".services.ServiceHome"
             android:exported="false" />
         <activity
-            android:name=".FragHome"
+            android:name=".fragments.FragHome"
             android:exported="false" />
         <activity
-            android:name=".FragPass"
+            android:name=".fragments.FragPass"
             android:exported="false" />
         <activity
-            android:name=".FragMain"
+            android:name=".fragments.FragMain"
             android:exported="false" />
         <activity
             android:name=".home.Home"
