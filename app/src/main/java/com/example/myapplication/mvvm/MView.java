@@ -13,6 +13,7 @@ import com.example.myapplication.dagger.CarComponent;
 
 
 //import com.example.myapplication.dagger.DaggerCarComponent;
+import com.example.myapplication.dagger.DaggerCarComponent;
 import com.example.myapplication.mvvm.noteapp.NoteActivity;
 import com.example.myapplication.mvvm.viewmodel.MyViewModel2;
 
@@ -29,9 +30,9 @@ public class MView extends AppCompatActivity {
         mview2=(Button) findViewById(R.id.mview2);
         mview3=(Button) findViewById(R.id.mview3);
         mview4=(Button) findViewById(R.id.mview4);
-//        CarComponent component= DaggerCarComponent.create();
-//        car=component.getCar();
-//        car.drive();
+        CarComponent component= DaggerCarComponent.create();
+        car=component.getCar();
+        car.drive();
         mview1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {

@@ -45,8 +45,8 @@ public class ActivityViewModel extends ViewModel implements LifecycleObserver {
     public void stopcount(){
         check=false;
     }
-//    @OnLifecycleEvent(Lifecycle.Event.ON_RESUME)
-//    private void lifeCycle(){
-//        Log.d("lifecycle","Event is resumed!");
-//    }
+    @OnLifecycleEvent(Lifecycle.Event.ON_RESUME)
+    private void lifeCycle(){
+        Log.d("lifecycle","Event is resumed!");
+    }
 }
